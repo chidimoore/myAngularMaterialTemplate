@@ -1,0 +1,29 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center none">
+    <div fxFlex="95%">
+  
+      <mat-card>
+        <mat-card-content>
+          <h2>Register Taxpayer</h2>
+  
+  
+          <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Taxpayer</mat-label>
+              <input type="email" matInput [formControl]="emailFormControl" placeholder="Harith Ahmada">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid Taxpayer Name
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Taxpayer is <strong>required</strong>
+              </mat-error>
+
+              
+            </mat-form-field>
+            <button mat-raised-button color="primary">  Submit</button>
+          </form>
+  
+        </mat-card-content>
+      </mat-card>
+  
+    </div>
+  </div>
